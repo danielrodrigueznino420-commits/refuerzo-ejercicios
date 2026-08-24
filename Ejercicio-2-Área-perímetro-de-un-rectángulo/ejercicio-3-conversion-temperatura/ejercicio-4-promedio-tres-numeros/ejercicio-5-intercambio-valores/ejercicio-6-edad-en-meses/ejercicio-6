@@ -11,6 +11,12 @@
 
     <div id="resultado"></div>
 
-    <script src="script.js"></script>
+    <script src=""></script>
+        function calcularMeses() {
+            let edadAnios = parseInt(prompt("Ingrese su edad en años:"));   
+        }
+        calcularMeses();
+    </script>
 </body>
 </html>
+

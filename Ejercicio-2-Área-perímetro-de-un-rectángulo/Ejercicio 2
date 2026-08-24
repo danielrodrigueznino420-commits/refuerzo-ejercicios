@@ -11,6 +11,20 @@
 
     <div id="resultado"></div>
 
-    <script src="script.js"></script>
+    <script>
+        function calcularAreaPerimetro() {
+            let base = parseFloat(prompt("Ingrese la base del rectángulo:"));
+            let altura = parseFloat(prompt("Ingrese la altura del rectángulo:"));
+
+            let area = base * altura;
+            let perimetro = 2 * (base + altura);
+
+            document.getElementById("resultado").innerHTML =
+                "Área: " + area + "<br>" +
+                "Perímetro: " + perimetro;
+        }
+
+        calcularAreaPerimetro();
+    </script>
 </body>
 </html>

@@ -11,6 +11,22 @@
 
     <div id="resultado"></div>
 
-    <script src="script.js"></script>
+    <script>
+        function intercambiarValores() {
+            let a = parseFloat(prompt("Ingrese el primer valor:"));
+            let b = parseFloat(prompt("Ingrese el segundo valor:"));
+
+            // Intercambiar los valores
+            let temp = a;
+            a = b;
+            b = temp;
+
+            document.getElementById("resultado").innerHTML =
+                "Primer valor después del intercambio: " + a + "<br>" +
+                "Segundo valor después del intercambio: " + b;
+        }
+
+        intercambiarValores();
+    </script>
 </body>
 </html>
