@@ -22,6 +22,7 @@
         "El cuadrado del número es: " + cuadrado;
 
         }
-calcularCuadrado();</script>
+calcularCuadrado();
+    </script>
 </body>
 </html>
