@@ -22,6 +22,7 @@
         "Temperatura en Fahrenheit: " + fahrenheit + " °F";
 }
 
-convertirTemperatura();</script>
+convertirTemperatura();
+    </script>
 </body>
 </html>
