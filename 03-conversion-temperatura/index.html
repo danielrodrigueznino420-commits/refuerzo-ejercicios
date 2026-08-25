@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversión de temperatura</title>
+</head>
+<body>
+  <h1>Conversión de Celsius a Fahrenheit</h1>
+  <div id="resultado"></div>
+
+  <script>
+    function convertirTemperatura() {
+      const celsius = Number(prompt('Ingrese la temperatura en grados Celsius:'));
+
+      if (Number.isNaN(celsius)) {
+        document.getElementById('resultado').textContent = 'Ingrese un valor válido.';
+        return;
+      }
+
+      const fahrenheit = (celsius * 9 / 5) + 32;
+
+      document.getElementById('resultado').innerHTML = `
+        Temperatura en Celsius: ${celsius} °C<br>
+        Temperatura en Fahrenheit: ${fahrenheit} °F
+      `;
+    }
+
+    convertirTemperatura();
+  </script>
+</body>
+</html>

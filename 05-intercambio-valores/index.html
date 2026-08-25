@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intercambio de valores</title>
+</head>
+<body>
+  <h1>Intercambio de valores</h1>
+  <div id="resultado"></div>
+
+  <script>
+    function intercambiarValores() {
+      let a = Number(prompt('Ingrese el primer valor:'));
+      let b = Number(prompt('Ingrese el segundo valor:'));
+
+      if (Number.isNaN(a) || Number.isNaN(b)) {
+        document.getElementById('resultado').textContent = 'Ingrese valores válidos.';
+        return;
+      }
+
+      const temp = a;
+      a = b;
+      b = temp;
+
+      document.getElementById('resultado').innerHTML = `
+        Primer valor después del intercambio: ${a}<br>
+        Segundo valor después del intercambio: ${b}
+      `;
+    }
+
+    intercambiarValores();
+  </script>
+</body>
+</html>

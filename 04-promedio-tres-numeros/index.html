@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Promedio de tres números</title>
+</head>
+<body>
+  <h1>Promedio de tres números</h1>
+  <div id="resultado"></div>
+
+  <script>
+    function calcularPromedio() {
+      const num1 = Number(prompt('Ingrese el primer número:'));
+      const num2 = Number(prompt('Ingrese el segundo número:'));
+      const num3 = Number(prompt('Ingrese el tercer número:'));
+
+      if ([num1, num2, num3].some((n) => Number.isNaN(n))) {
+        document.getElementById('resultado').textContent = 'Ingrese números válidos.';
+        return;
+      }
+
+      const promedio = (num1 + num2 + num3) / 3;
+
+      document.getElementById('resultado').innerHTML = `
+        Primer número: ${num1}<br>
+        Segundo número: ${num2}<br>
+        Tercer número: ${num3}<br>
+        Promedio: ${promedio}
+      `;
+    }
+
+    calcularPromedio();
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edad en meses</title>
+</head>
+<body>
+  <h1>Edad en meses</h1>
+  <div id="resultado"></div>
+
+  <script>
+    function calcularMeses() {
+      const edadAnios = Number.parseInt(prompt('Ingrese su edad en años:'), 10);
+
+      if (Number.isNaN(edadAnios)) {
+        document.getElementById('resultado').textContent = 'Ingrese una edad válida.';
+        return;
+      }
+
+      const edadMeses = edadAnios * 12;
+
+      document.getElementById('resultado').innerHTML = `
+        Edad ingresada: ${edadAnios} años<br>
+        Edad en meses: ${edadMeses} meses
+      `;
+    }
+
+    calcularMeses();
+  </script>
+</body>
+</html>
